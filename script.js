@@ -35,9 +35,10 @@ const calcTip = function (percent) {
         hidden.style.display = 'block';
         hidden.style.color = 'red';
         hidden.style.fontWeight = 'lighter';
+        // numOfPeople.style.border.color = 'red';
     }
 };
-
+// Button Events
 btn1.addEventListener('click', function() {
     calcTip(5)
 });
@@ -53,13 +54,14 @@ btn4.addEventListener('click', function() {
 btn5.addEventListener('click', function() {
     calcTip(50)
 });
-
+// Custom Event
 custom.addEventListener('input', function() {
     let customInput = Number(document.querySelector('.btn-input').value);
     if (customInput > 0){
     calcTip(customInput);
 }
 });
+// Reset Button Event
 reset.addEventListener('click', function (){
     bill.value = null;
     numOfPeople.value = null;
