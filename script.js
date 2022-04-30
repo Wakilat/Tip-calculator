@@ -27,9 +27,9 @@ const calcTip = function (percent) {
     let numOfPeople = Number(document.querySelector('.people-input').value);
     if (bill > 0 && numOfPeople > 0){
         hidden.style.display = 'none';
-        let payTip = (bill * (percent / 100))/numOfPeople;
-    tip.textContent = payTip;
-    let payTotal = payTip + (bill/numOfPeople);
+        let payTip = (bill * (percent / 100)) / numOfPeople.toFixed(2);
+    tip.textContent = payTip.toFixed(2);
+    let payTotal = (payTip + (bill/numOfPeople)).toFixed(2);
     total.textContent = payTotal;
     } else {
         hidden.style.display = 'block';
